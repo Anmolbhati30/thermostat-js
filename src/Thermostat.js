@@ -27,6 +27,9 @@ class Thermostat {
   }
 
   turnOnPSM() {
+    if (this.temp > 25) {
+      this.temp = 25;
+    }
     this.powerSavingMode = true;
   }
 
