@@ -31,5 +31,11 @@ psmOn.addEventListener('click', e => {
 psmOff.addEventListener('click', e => thermostat.turnOffPSM());
 
 function updateTempText() {
+  let usage = thermostat.energyUsage();
+  displayTemp.style.color = usage === "low-usage" 
+                            ? "green" 
+                            : (usage === "medium-usage" 
+                              ? "black" : "red"
+                          );
   displayTemp.textContent = thermostat.temp;
 }
