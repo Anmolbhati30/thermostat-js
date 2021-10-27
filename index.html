@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermostat</title>
+</head>
+<body>
+  <div class="display-temp">
+    Current temperture: <span id="temp-val">20</span>&#xb0;C
+  </div>
+  <fieldset class="input-group">
+    <legend class="input-group-label">Adjust temperature</legend>
+    <button class="btn adjust-temp" id="increase-temp">+</button>
+    <button class="btn adjust-temp" id="decrease-temp">-</button>
+    <button class="btn" id="reset-temp">reset</button>
+  </fieldset>
+  <fieldset class="input-group">
+    <legend class="input-group-label">Power saving mode</legend>
+    <label for="psm-on">ON</label>
+    <input type="radio" class="radio-psm" name="psm" id="psm-on" checked />
+    <label for="psm-off">OFF</label>
+    <input type="radio" class="radio-psm" name="psm" id="psm-off" />
+  </fieldset>
+  <script src="./src/Thermostat.js"></script>
+</body>
+</html>
